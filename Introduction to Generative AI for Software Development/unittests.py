@@ -215,7 +215,7 @@ def test_tsp_medium_graph(Graph):
                 p.terminate()
                 t.failed = True
                 t.msg = f"Exceeded time execution limit for a tour starting in node 0. To replicate the graph, you may run generate_graph(nodes = 300, complete = True, seed = {42+i})"
-                t.want =  f"{function_name} method must run in less than 0.5 seconds"
+                t.want =  f"{function_name} method must run in less than {time_limit} seconds"
                 t.got = f"Time execution exceeded {time_limit} seconds"
             else:
                 p.join()
